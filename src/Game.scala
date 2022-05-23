@@ -1,7 +1,7 @@
-trait Game[T] {
-  val printBoard: T => Unit
-  val parseInput: String => Turn
-  val checkPlay: (T, Turn) => Boolean
-  val change: (T, Turn) => T
-  val initialState: T
+trait Game[S, T] {
+  val printBoard: S => Unit
+  val parseInput: String => T
+  val checkPlay: (S, T) => Boolean
+  val change: (S, T) => S
+  val initialState: S
 }

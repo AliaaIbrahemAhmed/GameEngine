@@ -4,14 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="304907e3-ca37-4e85-b3b0-a6645c19f181" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GameEngine.iml" afterDir="false" />
+    <list default="true" id="304907e3-ca37-4e85-b3b0-a6645c19f181" name="Changes" comment="Checkers">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,8 +63,24 @@
       <option name="presentableId" value="Default" />
       <updated>1653095740434</updated>
       <workItem from="1653095741987" duration="555000" />
-      <workItem from="1653097865153" duration="1403000" />
+      <workItem from="1653097865153" duration="4626000" />
+      <workItem from="1653324467512" duration="1509000" />
     </task>
+    <task id="LOCAL-00001" summary="Initial Commit">
+      <created>1653100413246</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1653100413246</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Checkers">
+      <created>1653135626062</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1653135626062</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -86,5 +96,10 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Initial Commit" />
+    <MESSAGE value="Checkers" />
+    <option name="LAST_COMMIT_MESSAGE" value="Checkers" />
   </component>
 </project>
