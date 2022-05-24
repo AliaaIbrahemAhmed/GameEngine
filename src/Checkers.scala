@@ -31,20 +31,20 @@ class Checkers extends Game[CheckersState, CheckersTurn] {
 
   override val checkPlay: (CheckersState, CheckersTurn) => Boolean = (state: CheckersState, newPlay: CheckersTurn) => {
     if (state.isKing(newPlay.prevIndex)) {
-     // kingMove(state, newPlay)
+      // kingMove(state, newPlay)
     } else {
-     // normalMove(state, newPlay)
+      // normalMove(state, newPlay)
     }
     true
   }
 
- /* def kingMove(state: CheckersState, newPlay: CheckersTurn): Boolean = {
+  /* def kingMove(state: CheckersState, newPlay: CheckersTurn): Boolean = {
 
-  }
+   }
 
-  def normalMove(state: CheckersState, newPlay: CheckersTurn): Boolean = {
+   def normalMove(state: CheckersState, newPlay: CheckersTurn): Boolean = {
 
-  }*/
+   }*/
 
   def getPlayer(player: Boolean): String = {
     if (player) return "W"
