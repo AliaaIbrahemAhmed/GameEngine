@@ -7,14 +7,20 @@ class GameEngine[S, T](var state: S) {
            parseInput: String => T,
            checkPlay: (S, T) => Boolean,
            change: (S, T) => S): Unit = {
+    printBoard(state)
     while (true) {
-      printBoard(state)
-      print("Please Enter the next Move")
-      var input: String = scala.io.StdIn.readLine() 
+      println("Please Enter the next Move")
+      var input: String = scala.io.StdIn.readLine()
       var turn: T = parseInput(input)
-      if (checkPlay(state, turn)) {
-        state = change(state, turn) 
+      var valid=checkPlay(state,turn)
+      if (valid) {
+        printBoard(state)
+        state = change(state, turn)
       }
+      else {
+        println("Invalid")
+      }
+
     }
   }
 }
