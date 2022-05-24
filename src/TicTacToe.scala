@@ -1,3 +1,6 @@
+import States.TicTacToeState
+import Turns.TicTacToeTurn
+
 class TicTacToe extends Game[TicTacToeState,TicTacToeTurn] {
   override val printBoard: TicTacToeState => Unit = (state: TicTacToeState) => {
     println("      a         b          c")

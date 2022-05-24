@@ -24,15 +24,27 @@ class Checkers extends Game[CheckersState, CheckersTurn] {
 
   override val parseInput: String => CheckersTurn = (input: String) => {
     var index = Array(input.indexOf(0), input.indexOf(0))
-    var newTurn: CheckersTurn = new CheckersTurn(index, index, true, true)
+    var newTurn: CheckersTurn = new CheckersTurn(index, index, true)
     println("Input is parsed")
     newTurn
   }
 
-  override val checkPlay: (CheckersState, CheckersTurn) => Boolean = (pieces: CheckersState, newPlay: CheckersTurn) => {
-    println("Input is Checked")
+  override val checkPlay: (CheckersState, CheckersTurn) => Boolean = (state: CheckersState, newPlay: CheckersTurn) => {
+    if (state.isKing(newPlay.prevIndex)) {
+     // kingMove(state, newPlay)
+    } else {
+     // normalMove(state, newPlay)
+    }
     true
   }
+
+ /* def kingMove(state: CheckersState, newPlay: CheckersTurn): Boolean = {
+
+  }
+
+  def normalMove(state: CheckersState, newPlay: CheckersTurn): Boolean = {
+
+  }*/
 
   def getPlayer(player: Boolean): String = {
     if (player) return "W"
@@ -52,5 +64,6 @@ class Checkers extends Game[CheckersState, CheckersTurn] {
     Array(" ", " ", " ", " ", " ", " ", " ", " "),
     Array("W", " ", "W", " ", "W", " ", "W", " "),
     Array(" ", "W", " ", "W", " ", "W", " ", "W"),
-    Array("W", " ", "W", " ", "W", " ", "W", " ")))
+    Array("W", " ", "W", " ", "W", " ", "W", " ")), Array.ofDim[Boolean](8, 8))
+
 }
