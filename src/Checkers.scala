@@ -1,18 +1,37 @@
-class Checkers extends Game[Array[Array[String]],Turn] {
-  override val printBoard: Array[Array[String]] => Unit = (pieces: Array[Array[String]]) => {
-    println("Board is printed!")
+import States.CheckersState
+import Turns.CheckersTurn
+
+class Checkers extends Game[CheckersState, CheckersTurn] {
+  override val printBoard: CheckersState => Unit = (state: CheckersState) => {
+    println("|###|---|###|---|###|---|###|---|")
+    for (i <- 0 to 22) {
+      if (i % 3 != 0) {
+        if (i % 2 == 0) print("|---|###|---|###|---|###|---|###|")
+        else print("|###|---|###|---|###|---|###|---|")
+      } else {
+        for (j <- 0 to 32) {
+          if (j % 4 == 0) print("|")
+          else {
+            if ((j - 1) % 4 != 0 && (j + 1) % 4 != 0) print(state.getPieces()(i / 3)(j / 4))
+            else print(" ")
+          }
+        }
+      }
+      println()
+    }
   }
 
-  override val parseInput: String => Turn = (input: String) => {
+
+  override val parseInput: String => CheckersTurn = (input: String) => {
     var index = Array(input.indexOf(0), input.indexOf(0))
-    var newTurn: Turn = new Turn(index, true, true) 
+    var newTurn: CheckersTurn = new CheckersTurn(index, index, true, true)
     println("Input is parsed")
-    newTurn 
+    newTurn
   }
 
-  override val checkPlay: (Array[Array[String]], Turn) => Boolean = (pieces: Array[Array[String]], newPlay: Turn) => {
+  override val checkPlay: (CheckersState, CheckersTurn) => Boolean = (pieces: CheckersState, newPlay: CheckersTurn) => {
     println("Input is Checked")
-    true 
+    true
   }
 
   def getPlayer(player: Boolean): String = {
@@ -20,12 +39,12 @@ class Checkers extends Game[Array[Array[String]],Turn] {
     "B"
   }
 
-  override val change: (Array[Array[String]], Turn) => Array[Array[String]] = (pieces: Array[Array[String]], newPlay: Turn) => {
-    pieces(newPlay.index(0))(newPlay.index(1)) =  getPlayer(newPlay.player)
+  override val change: (CheckersState, CheckersTurn) => CheckersState = (pieces: CheckersState, newPlay: CheckersTurn) => {
+    //  pieces(newPlay.index(0))(newPlay.index(1)) =  getPlayer(newPlay.player)
     println("Input is Changed")
-    pieces 
+    pieces
   }
-  override val initialState: Array[Array[String]] = Array(
+  override val initialState: CheckersState = new CheckersState(Array(
     Array(" ", "B", " ", "B", " ", "B", " ", "B"),
     Array("B", " ", "B", " ", "B", " ", "B", " "),
     Array(" ", "B", " ", "B", " ", "B", " ", "B"),
@@ -33,5 +52,5 @@ class Checkers extends Game[Array[Array[String]],Turn] {
     Array(" ", " ", " ", " ", " ", " ", " ", " "),
     Array("W", " ", "W", " ", "W", " ", "W", " "),
     Array(" ", "W", " ", "W", " ", "W", " ", "W"),
-    Array("W", " ", "W", " ", "W", " ", "W", " "))
+    Array("W", " ", "W", " ", "W", " ", "W", " ")))
 }
