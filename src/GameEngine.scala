@@ -1,26 +1,27 @@
+import Inputs.Input
+
 /*
 S : generic type for the State class
 T : generic type for the Turn class
+I : generic type for the input class
  */
-class GameEngine[S, T](var state: S) {
-  def game(printBoard: S => Unit,
-           parseInput: String => T,
-           checkPlay: (S, T) => Boolean,
-           change: (S, T) => S): Unit = {
-    printBoard(state)
+class GameEngine[S, I](var state: S, var move: I) {
+  def game(drawer: S => Unit,
+           controller: (S, I, Int) => (S, Boolean)
+          ): Unit = {
+    var turn = 0
+    drawer(state)
     while (true) {
       println("Please Enter the next Move")
-      var input: String = scala.io.StdIn.readLine()
-      var turn: T = parseInput(input)
-      var valid=checkPlay(state,turn)
+      val (newState, valid) = controller(state, move, turn)
       if (valid) {
-        printBoard(state)
-        state = change(state, turn)
+        drawer(newState)
+        state = newState
+        turn = (turn + 1) % 2
       }
       else {
         println("Invalid")
       }
-
     }
   }
 }
