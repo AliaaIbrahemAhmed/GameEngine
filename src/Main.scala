@@ -2,6 +2,8 @@ import Inputs.{ConnectFourInput, TicTacToeInput}
 import States.{CheckersState, ConnectFourState, TicTacToeState}
 import Turns.CheckersTurn
 import Turns.TicTacToeTurn
+
+import javax.swing.JFrame
 object Main {
   def main(args: Array[String]): Unit = {
 //    var x: TicTacToe = new TicTacToe

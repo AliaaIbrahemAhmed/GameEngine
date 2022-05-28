@@ -5,11 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="304907e3-ca37-4e85-b3b0-a6645c19f181" name="Changes" comment="Generic Turn modification">
-      <change afterPath="$PROJECT_DIR$/src/Inputs/TicTacToeInput.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/GameEngine/GameEngine.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GameEngine/GameEngine.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Checkers.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/Checkers.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ConnectFour.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/ConnectFour.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GameEngine.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/GameEngine.scala" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/States/TicTacToeState.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/States/TicTacToeState.scala" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/TicTacToe.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/TicTacToe.scala" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -106,7 +109,6 @@
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Initial Commit" />
@@ -119,10 +121,13 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="scala-line">
           <url>file://$PROJECT_DIR$/src/TicTacToe.scala</url>
-          <line>18</line>
+          <line>19</line>
           <option name="timeStamp" value="3" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/GameEngine$Main.ic" NAME="Main Coverage Results" MODIFIED="1653712369125" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>

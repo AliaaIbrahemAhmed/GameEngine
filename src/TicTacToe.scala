@@ -1,8 +1,11 @@
 import States.TicTacToeState
 import Turns.TicTacToeTurn
 import Inputs.TicTacToeInput
+
+import java.awt.{Color, Graphics}
+import javax.swing.{JFrame, JPanel}
 class TicTacToe  {
-  def drawer(TicTacToeState: TicTacToeState): Unit = {
+  def drawer(frame: JFrame, TicTacToeState: TicTacToeState): Unit = {
       println("      a         b          c")
 
       println("   ______________________________")
@@ -13,6 +16,7 @@ class TicTacToe  {
       println("1 |   " + TicTacToeState.board(2)(0) + "    |    " + TicTacToeState.board(2)(1) + "     |    " + TicTacToeState.board(2)(2) + "    |")
       println("  _______________________________")
       println("      a         b          c")
+    draw(frame,TicTacToeState.board)
     }
   def controller(ticTacToeState: TicTacToeState, input: TicTacToeInput, turn: Int): (TicTacToeState, Boolean) = {
     val PlayerAndMove: String = scala.io.StdIn.readLine()
@@ -52,9 +56,26 @@ class TicTacToe  {
     else {
       (ticTacToeState, false)
     }
-
-
 }
+  def draw(frame:JFrame, board: Array[Array[String]]){
+
+    frame.getContentPane().removeAll()
+    frame.getContentPane().setBackground(Color.lightGray)
+    frame.setBounds(10,10,512,512);
+    var pn = new JPanel(null){
+      override def paint(graphics: Graphics): Unit = {
+        for (i <- 0 to 2) {
+          for (j <- 0 to 2) {
+              graphics.setColor(Color.BLACK)
+              graphics.drawRect(j * 64, i * 64, 64, 64)
+            }
+          }
+        }
+    }
+    frame.add(pn)
+    frame.setDefaultCloseOperation(3);
+    frame.setVisible(true);
+  }
 }
 
 
