@@ -1,17 +1,15 @@
+
 import Inputs.{ConnectFourInput, TicTacToeInput}
 import States.{CheckersState, ConnectFourState, TicTacToeState}
-import Turns.CheckersTurn
-import Turns.TicTacToeTurn
 
 import javax.swing.JFrame
+import Inputs.{CheckersInput, ChessInput, ConnectFourInput, TicTacToeInput}
+import States.{CheckersState, ChessState, ConnectFourState, TicTacToeState}
+
 object Main {
   def main(args: Array[String]): Unit = {
-//    var x: TicTacToe = new TicTacToe
-//    var y: Array[String] = Array("1", "2", "3")
-//    var gameEngine: GameEngine[TicTacToeState,TicTacToeTurn] = new GameEngine[TicTacToeState,TicTacToeTurn](x.initialState)
-//    gameEngine.game(x.printBoard, x.parseInput, x.checkPlay, x.change)
     var valid = false
-    while(!valid) {
+    while (!valid) {
       valid = true
       println("Enter the Number of the Game you want to play:")
       println("1. Tic-Tac-Toe")
@@ -33,10 +31,14 @@ object Main {
         gameEngine.game(connect4.drawer, connect4.controller)
       }
       else if (chosenGame == 3) {
-
+        val gameEngine = new GameEngine[CheckersState, CheckersInput](new CheckersState, new CheckersInput);
+        val checkers = new Checkers
+        gameEngine.game(checkers.drawer, checkers.controller)
       }
       else if (chosenGame == 4) {
-
+        val gameEngine = new GameEngine[ChessState, ChessInput](new ChessState, new ChessInput);
+        val chess = new Chess
+        gameEngine.game(chess.drawer, chess.controller)
       }
       else {
         println("Invalid Choice")
