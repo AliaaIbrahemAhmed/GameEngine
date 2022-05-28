@@ -642,7 +642,6 @@ class Chess extends Game[ChessState, ChessInput] {
   }
   def draw(frame: JFrame, board:Array[Array[String]]){
     frame.getContentPane().removeAll()
-    frame.getContentPane().setBackground(Color.lightGray)
     frame.setBounds(10,10,720,720);
     var pn = new JPanel(null){
       override def paint(graphics: Graphics): Unit = {
@@ -686,7 +685,6 @@ class Chess extends Game[ChessState, ChessInput] {
         }
       }
     }
-    frame.add(pn)
     var letters = Array("a", "b", "c", "d", "e","f","g","h")
     for(i <- 1 to 8){
       var label = new JLabel(letters(i-1))
@@ -698,6 +696,7 @@ class Chess extends Game[ChessState, ChessInput] {
       frame.add(label)
       frame.add(label2)
     }
+    frame.add(pn)
     frame.setDefaultCloseOperation(3);
     frame.setVisible(true);
   }

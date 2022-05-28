@@ -199,7 +199,6 @@ class Checkers extends Game[CheckersState, CheckersInput] {
   }
   def draw(frame: JFrame, board:Array[Array[String]]){
     frame.getContentPane().removeAll()
-    frame.getContentPane().setBackground(Color.lightGray)
     frame.setBounds(10,10,720,720);
     var pn = new JPanel(null){
       override def paint(graphics: Graphics): Unit = {

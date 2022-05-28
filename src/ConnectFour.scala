@@ -38,7 +38,6 @@ class ConnectFour extends Game[ConnectFourState, ConnectFourInput] {
 
   def draw(frame: JFrame, board: Array[Array[Char]]) ={
     frame.getContentPane().removeAll()
-    frame.getContentPane().setBackground(Color.lightGray)
     frame.setBounds(10,10,512,512);
     var pn = new JPanel(null){
       override def paint(graphics: Graphics): Unit = {

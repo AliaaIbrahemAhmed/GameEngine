@@ -1,7 +1,10 @@
 import States.TicTacToeState
 import Inputs.TicTacToeInput
 
-import java.awt.{Color, Graphics, Graphics2D}
+import java.awt.image.BufferedImage
+import java.awt.{Color, Font, Graphics, Graphics2D}
+import java.io.File
+import javax.imageio.ImageIO
 import javax.swing.{JFrame, JPanel}
   class TicTacToe extends Game[TicTacToeState, TicTacToeInput] {
     def drawer(frame: JFrame, TicTacToeState: TicTacToeState): Unit = {
@@ -56,19 +59,23 @@ import javax.swing.{JFrame, JPanel}
 
     def draw(frame: JFrame, board: Array[Array[String]]) {
       frame.getContentPane().removeAll()
-      frame.setBounds(10, 10, 400, 400);
+      frame.setBounds(10, 10, 512, 512);
+      val imgx: BufferedImage = ImageIO.read(new File("x.png"))
+      val imgo: BufferedImage = ImageIO.read(new File("o.png"))
+      var x = imgx.getScaledInstance(64, 64, BufferedImage.TYPE_INT_ARGB)
+      var o = imgo.getScaledInstance(64, 64, BufferedImage.TYPE_INT_ARGB)
       var pn = new JPanel(null) {
         override def paint(graphics: Graphics): Unit = {
+          graphics.setFont(new Font("TimesRoman", Font.PLAIN, 30))
           for (i <- 0 to 2) {
             for (j <- 0 to 2) {
               graphics.setColor(Color.BLACK)
               graphics.drawRect(j * 64, i * 64, 64, 64)
-
               if(board(i)(j).equals("X")){
-                graphics.drawString("X", ((j*64)+64)/2, ((i*64)+64)/2)
+                graphics.drawImage(x, j * 64, i * 64, this)
               }
-              if(board(i)(j).equals("O")){
-                graphics.drawString("O", ((j*64)+64)/2, ((i*64)+64)/2)
+              else if(board(i)(j).equals("O")){
+                graphics.drawImage(o, j * 64, i * 64, this)
               }
             }
           }
