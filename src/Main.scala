@@ -1,4 +1,4 @@
-import Inputs.ConnectFourInput
+import Inputs.{ConnectFourInput, TicTacToeInput}
 import States.{CheckersState, ConnectFourState, TicTacToeState}
 import Turns.CheckersTurn
 import Turns.TicTacToeTurn
@@ -18,7 +18,12 @@ object Main {
       println("4. Chess")
       val chosenGame = scala.io.StdIn.readInt()
       if (chosenGame == 1) {
-
+        val gameEngine = new GameEngine[TicTacToeState, TicTacToeInput](new TicTacToeState(Array(
+          Array(" ", " ", " "),
+          Array(" ", " ", " "),
+          Array(" ", " ", " "))), new TicTacToeInput)
+        val TicTacToe = new TicTacToe
+        gameEngine.game(TicTacToe.drawer, TicTacToe.controller)
       }
       else if (chosenGame == 2) {
         val gameEngine = new GameEngine[ConnectFourState, ConnectFourInput](new ConnectFourState, new ConnectFourInput)

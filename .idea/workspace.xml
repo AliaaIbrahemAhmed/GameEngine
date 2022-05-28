@@ -4,17 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="304907e3-ca37-4e85-b3b0-a6645c19f181" name="Changes" comment="Connect Four added + Game Engine Modified">
-      <change afterPath="$PROJECT_DIR$/.idea/runConfigurations.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ConnectFour.scala" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Inputs/ConnectFourInput.scala" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Inputs/Input.scala" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/States/ConnectFourState.scala" afterDir="false" />
+    <list default="true" id="304907e3-ca37-4e85-b3b0-a6645c19f181" name="Changes" comment="Generic Turn modification">
+      <change afterPath="$PROJECT_DIR$/src/Inputs/TicTacToeInput.scala" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/GameEngine/Game.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GameEngine/Game.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/GameEngine/GameEngine.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GameEngine/GameEngine.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GameEngine.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/GameEngine.scala" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/States/TicTacToeState.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/States/TicTacToeState.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TicTacToe.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/TicTacToe.scala" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,7 +24,6 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
-        <option value="Scala Trait" />
       </list>
     </option>
   </component>
@@ -46,12 +41,6 @@
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
-  </component>
-  <component name="PropertiesComponent">
-    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true">
@@ -123,7 +112,17 @@
     <MESSAGE value="Initial Commit" />
     <MESSAGE value="Checkers" />
     <MESSAGE value="Generic Turn modification" />
-    <MESSAGE value="Connect Four added + Game Engine Modified" />
-    <option name="LAST_COMMIT_MESSAGE" value="Connect Four added + Game Engine Modified" />
+    <option name="LAST_COMMIT_MESSAGE" value="Generic Turn modification" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="scala-line">
+          <url>file://$PROJECT_DIR$/src/TicTacToe.scala</url>
+          <line>18</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

@@ -1,72 +1,60 @@
 import States.TicTacToeState
 import Turns.TicTacToeTurn
+import Inputs.TicTacToeInput
+class TicTacToe  {
+  def drawer(TicTacToeState: TicTacToeState): Unit = {
+      println("      a         b          c")
 
-class TicTacToe extends Game[TicTacToeState,TicTacToeTurn] {
-  override val printBoard: TicTacToeState => Unit = (state: TicTacToeState) => {
-    println("      a         b          c")
-
-    println("   ______________________________")
-    println("3 |   " + state.board(0)(0) + "    |    " + state.board(0)(1) + "     |    " + state.board(0)(2) + "    |")
-    println("  _______________________________")
-    println("2 |   " + state.board(1)(0) + "    |    " + state.board(1)(1) + "     |    " + state.board(1)(2) + "    |")
-    println("  _______________________________")
-    println("1 |   " + state.board(2)(0) + "    |    " + state.board(2)(1) + "     |    " + state.board(2)(2) + "    |")
-    println("  _______________________________")
-    println("      a         b          c")
-  }
-  override val parseInput: String => TicTacToeTurn = (input: String) => {
-    var spliter = new Array[String](2)
-    spliter = input.split(" ")
-    if(spliter.length==1) {
-    var newTurn: TicTacToeTurn = new TicTacToeTurn(null, null,false)
-      newTurn
+      println("   ______________________________")
+      println("3 |   " + TicTacToeState.board(0)(0) + "    |    " + TicTacToeState.board(0)(1) + "     |    " + TicTacToeState.board(0)(2) + "    |")
+      println("  _______________________________")
+      println("2 |   " + TicTacToeState.board(1)(0) + "    |    " + TicTacToeState.board(1)(1) + "     |    " + TicTacToeState.board(1)(2) + "    |")
+      println("  _______________________________")
+      println("1 |   " + TicTacToeState.board(2)(0) + "    |    " + TicTacToeState.board(2)(1) + "     |    " + TicTacToeState.board(2)(2) + "    |")
+      println("  _______________________________")
+      println("      a         b          c")
     }
-    else {
+  def controller(ticTacToeState: TicTacToeState, input: TicTacToeInput, turn: Int): (TicTacToeState, Boolean) = {
+    val PlayerAndMove: String = scala.io.StdIn.readLine()
+    if(input.setValue(PlayerAndMove)) {
+      var spliter = new Array[String](2)
+      spliter = PlayerAndMove.split(" ")
       var player = spliter(0).toUpperCase
       var location = new Array[Int](2)
       location(0) = 3 - (spliter(1).charAt(0).toInt - 48)
       location(1) = (spliter(1).charAt(1).toInt - 'a'.toInt)
-      var newTurn: TicTacToeTurn = new TicTacToeTurn(location, player, true)
-      newTurn
+      var row = location(0)
+      var col = location(1)
+      if (row >= 3 || col >= 3 ||row<0 || col<0  || (!player.equals("X") && !player.equals("O"))) {
+        (ticTacToeState,false)
+      }
+      else if(turn ==0&& player.equals("O")){
+        (ticTacToeState,false)
+      }
+      else if(turn==1&&player.equals("X")){
+        (ticTacToeState,false)
+
+      }
+      else if (ticTacToeState.board(row)(col) == " ") {
+        if(turn==0) {
+          ticTacToeState.board(row)(col) = "X"
+
+        }
+        else {
+          ticTacToeState.board(row)(col) = "O"
+        }
+        (ticTacToeState,true)
+      }
+    else {
+        (ticTacToeState,false)
+    }
+  }
+    else {
+      (ticTacToeState, false)
     }
 
-  }
-  override val checkPlay: (TicTacToeState, TicTacToeTurn) => Boolean = (state: TicTacToeState, newPlay: TicTacToeTurn) => {
-    if (newPlay.isValid == false) {
-      false
-    }
-    else {
-      var row = newPlay.index(0)
-      var col = newPlay.index(1)
-
-      if (row >= 3 || col >= 3 || state.player == newPlay.player || !newPlay.player.equals("X") && !newPlay.player.equals("O")) {
-        false
-      }
-      else if (state.board(row)(col) == " ") {
-        state.board(row)(col) = newPlay.player
-        true
-      }
-      else {
-        false
-      }
-    }
-  }
-  override val change: (TicTacToeState, TicTacToeTurn) => TicTacToeState = (state: TicTacToeState, newPlay: TicTacToeTurn) => {
-    if(state.player=="X"){
-      state.player="O"
-    }
-    else {
-      state.player="X"
-    }
-    state
-  }
-  override val initialState:TicTacToeState = {
-    var state=new TicTacToeState(Array(
-      Array(" ", " ", " "),
-      Array(" ", " ", " "),
-      Array(" ", " ", " "))," ")
-     state
-  }
 
 }
+}
+
 
