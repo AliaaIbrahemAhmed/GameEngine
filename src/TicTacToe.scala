@@ -91,7 +91,6 @@ import javax.swing.{JFrame, JLabel, JPanel}
         label2.setFont(new Font("Serif", Font.PLAIN, 20))
         frame.add(label)
         frame.add(label2)
-
       }
       frame.add(pn)
       frame.setDefaultCloseOperation(3);

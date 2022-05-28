@@ -200,6 +200,14 @@ class Checkers extends Game[CheckersState, CheckersInput] {
   def draw(frame: JFrame, board:Array[Array[String]]){
     frame.getContentPane().removeAll()
     frame.setBounds(10,10,720,720);
+    val imgb: BufferedImage = ImageIO.read(new File("b.png"))
+    val imgw: BufferedImage = ImageIO.read(new File("w.png"))
+    val imgbk: BufferedImage = ImageIO.read(new File("bk.png"))
+    val imgwk: BufferedImage = ImageIO.read(new File("wk.png"))
+    var b= imgb.getScaledInstance(64, 64, BufferedImage.TYPE_INT_ARGB)
+    var w = imgw.getScaledInstance(64, 64, BufferedImage.TYPE_INT_ARGB)
+    var bk= imgbk.getScaledInstance(64, 64, BufferedImage.TYPE_INT_ARGB)
+    var wk = imgwk.getScaledInstance(64, 64, BufferedImage.TYPE_INT_ARGB)
     var pn = new JPanel(null){
       override def paint(graphics: Graphics): Unit = {
         var white = true;
@@ -212,20 +220,18 @@ class Checkers extends Game[CheckersState, CheckersInput] {
             }
             graphics.fillRect(j * 64, i * 64, 64, 64)
             if(board(i)(j).charAt(0) == 'w') {
-              graphics.setColor(Color.white)
-              graphics.fillOval(j * 64, i * 64, 50, 50)
+              graphics.drawImage(w, j * 64, i * 64, this)
             }
             else if(board(i)(j).charAt(0)== 'b') {
-              graphics.setColor(Color.black)
-              graphics.fillOval(j * 64, i * 64, 50, 50)
+              graphics.drawImage(b, j * 64, i * 64, this)
+
             }
             else if(board(i)(j).charAt(0)== 'B'){
-              graphics.setColor(Color.black)
-              graphics.fillRect(j * 64, i * 64, 50, 50)
+              graphics.drawImage(bk, j * 64, i * 64, this)
+
             }
             else if(board(i)(j).charAt(0)== 'W'){
-              graphics.setColor(Color.white)
-              graphics.fillRect(j * 64, i * 64, 50, 50)
+              graphics.drawImage(wk, j * 64, i * 64, this)
             }
 
             white = !white

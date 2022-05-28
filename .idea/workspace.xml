@@ -5,11 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="304907e3-ca37-4e85-b3b0-a6645c19f181" name="Changes" comment="Generic Turn modification">
+      <change afterPath="$PROJECT_DIR$/src/META-INF/MANIFEST.MF" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/GameEngine/ConnectFour.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GameEngine/ConnectFour.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/GameEngine/Checkers.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GameEngine/Checkers.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/GameEngine/States/CheckersState.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GameEngine/States/CheckersState.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/GameEngine/TicTacToe.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GameEngine/TicTacToe.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Chess.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/Chess.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ConnectFour.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/ConnectFour.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Checkers.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/Checkers.scala" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/TicTacToe.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/TicTacToe.scala" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -41,6 +42,11 @@
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="project.structure.last.edited" value="Artifacts" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.2" />
   </component>
   <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true">
