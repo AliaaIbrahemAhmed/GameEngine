@@ -10,7 +10,6 @@ class TicTacToeInput() extends Input[(Array[Int], String)] {
       return false
     } else {
       player = splitter(0).toUpperCase
-      val location = new Array[Int](2)
       location(0) = 3 - (splitter(1).charAt(0).toInt - 48)
       location(1) = (splitter(1).charAt(1).toInt - 'a'.toInt)
     }

@@ -5,37 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="304907e3-ca37-4e85-b3b0-a6645c19f181" name="Changes" comment="Generic Turn modification">
-      <change afterPath="$PROJECT_DIR$/src/Chess.scala" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Inputs/CheckersInput.scala" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Inputs/ChessInput.scala" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/States/ChessState.scala" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/GameEngine/Checkers.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GameEngine/Checkers.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/GameEngine/ConnectFour$$anon$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GameEngine/ConnectFour$$anon$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/GameEngine/ConnectFour.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GameEngine/ConnectFour.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/GameEngine/Game.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GameEngine/Game.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/GameEngine/GameEngine.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GameEngine/GameEngine.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/GameEngine/Inputs/ConnectFourInput.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GameEngine/Inputs/ConnectFourInput.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/GameEngine/Inputs/Input.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GameEngine/Inputs/Input.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/GameEngine/Inputs/TicTacToeInput.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GameEngine/Inputs/TicTacToeInput.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/GameEngine/Main$.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GameEngine/Main$.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/GameEngine/States/CheckersState.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GameEngine/States/CheckersState.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/GameEngine/TicTacToe$$anon$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GameEngine/TicTacToe$$anon$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/GameEngine/TicTacToe.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GameEngine/TicTacToe.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/GameEngine/Turns/CheckersTurn.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/GameEngine/Turns/TicTacToeTurn.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/GameEngine/Chess.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GameEngine/Chess.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Checkers.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/Checkers.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ConnectFour.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/ConnectFour.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Game.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/Game.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GameEngine.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/GameEngine.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Inputs/ConnectFourInput.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/Inputs/ConnectFourInput.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Inputs/Input.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/Inputs/Input.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Inputs/TicTacToeInput.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/Inputs/TicTacToeInput.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/States/CheckersState.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/States/CheckersState.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/TicTacToe.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/TicTacToe.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Turns/CheckersTurn.scala" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Turns/TicTacToeTurn.scala" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Chess.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/Chess.scala" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

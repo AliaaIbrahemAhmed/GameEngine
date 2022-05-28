@@ -686,9 +686,8 @@ class Chess extends Game[ChessState, ChessInput] {
         }
       }
     }
-
+    frame.add(pn)
     var letters = Array("a", "b", "c", "d", "e","f","g","h")
-    var numbers = Array("a", "b", "c", "d", "e","f","g","h")
     for(i <- 1 to 8){
       var label = new JLabel(letters(i-1))
       var label2 = new JLabel((8-i+1).toString)
@@ -699,7 +698,6 @@ class Chess extends Game[ChessState, ChessInput] {
       frame.add(label)
       frame.add(label2)
     }
-    frame.add(pn)
     frame.setDefaultCloseOperation(3);
     frame.setVisible(true);
   }

@@ -220,6 +220,15 @@ class Checkers extends Game[CheckersState, CheckersInput] {
               graphics.setColor(Color.black)
               graphics.fillOval(j * 64, i * 64, 50, 50)
             }
+            else if(board(i)(j).charAt(0)== 'B'){
+              graphics.setColor(Color.black)
+              graphics.fillRect(j * 64, i * 64, 50, 50)
+            }
+            else if(board(i)(j).charAt(0)== 'W'){
+              graphics.setColor(Color.white)
+              graphics.fillRect(j * 64, i * 64, 50, 50)
+            }
+
             white = !white
           }
           white = !white
