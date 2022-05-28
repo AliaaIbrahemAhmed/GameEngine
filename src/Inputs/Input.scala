@@ -1,5 +1,7 @@
 package Inputs
 
-trait Input {
-  def setValue(input: String): Boolean
+trait Input[k] {
+  def setValue(input : String): Boolean
+  def getValue(): k
+
 }
