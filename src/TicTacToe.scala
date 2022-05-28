@@ -5,7 +5,7 @@ import java.awt.image.BufferedImage
 import java.awt.{Color, Font, Graphics, Graphics2D}
 import java.io.File
 import javax.imageio.ImageIO
-import javax.swing.{JFrame, JPanel}
+import javax.swing.{JFrame, JLabel, JPanel}
   class TicTacToe extends Game[TicTacToeState, TicTacToeInput] {
     def drawer(frame: JFrame, TicTacToeState: TicTacToeState): Unit = {
       println("      a         b          c")
@@ -80,6 +80,18 @@ import javax.swing.{JFrame, JPanel}
             }
           }
         }
+      }
+      var letters = Array("a", "b", "c")
+      for(i <- 1 to 3){
+        var label = new JLabel(letters(i-1))
+        var label2 = new JLabel((4-i).toString)
+        label.setBounds(31*(2*i-1),200,30,30)
+        label2.setBounds(200,31*(2*i-1),30,30)
+        label.setFont(new Font("Serif", Font.PLAIN, 20))
+        label2.setFont(new Font("Serif", Font.PLAIN, 20))
+        frame.add(label)
+        frame.add(label2)
+
       }
       frame.add(pn)
       frame.setDefaultCloseOperation(3);

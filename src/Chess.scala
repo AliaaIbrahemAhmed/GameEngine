@@ -641,7 +641,7 @@ class Chess extends Game[ChessState, ChessInput] {
     return (state, false)
   }
   def draw(frame: JFrame, board:Array[Array[String]]){
-    frame.getContentPane().removeAll()
+    frame.getContentPane.removeAll()
     frame.setBounds(10,10,720,720);
     var pn = new JPanel(null){
       override def paint(graphics: Graphics): Unit = {

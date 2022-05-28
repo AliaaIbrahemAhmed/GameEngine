@@ -1,7 +1,7 @@
 import Inputs.ConnectFourInput
 import States.ConnectFourState
 
-import java.awt.{Color, Graphics, Image}
+import java.awt.{Color, Font, Graphics, Image}
 import javax.swing.{JFrame, JLabel, JPanel, JTextField}
 
 class ConnectFour extends Game[ConnectFourState, ConnectFourInput] {
@@ -60,6 +60,14 @@ class ConnectFour extends Game[ConnectFourState, ConnectFourInput] {
           }
         }
       }
+    }
+    var letters = Array("a", "b", "c", "d", "e","f","g")
+    for(i <- 1 to 7){
+      var label = new JLabel(letters(i-1))
+      label.setBounds(31*(2*i-1),400,400,30)
+      label.setFont(new Font("Serif", Font.PLAIN, 20));
+      frame.add(label)
+
     }
     frame.add(pn)
     frame.setDefaultCloseOperation(3)
