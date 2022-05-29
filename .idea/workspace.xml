@@ -1,17 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="GameEngine:jar" />
+    </artifacts-to-build>
+  </component>
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="304907e3-ca37-4e85-b3b0-a6645c19f181" name="Changes" comment="Generic Turn modification">
-      <change afterPath="$PROJECT_DIR$/src/META-INF/MANIFEST.MF" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/GameEngine/Checkers.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GameEngine/Checkers.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/GameEngine/States/CheckersState.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GameEngine/States/CheckersState.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/GameEngine/TicTacToe.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GameEngine/TicTacToe.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Checkers.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/Checkers.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/TicTacToe.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/TicTacToe.scala" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
